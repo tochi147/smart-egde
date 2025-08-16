@@ -1,0 +1,854 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f3f2f2dc;
+     font-family: 'Roboto', sans-serif;
+
+}
+body.no-scroll,
+  html.no-scroll{
+  overflow: hidden;
+  height: 100vh;
+}
+.container{
+    max-width: 1540px;
+    margin: auto;
+}
+nav{
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+     background-color: #17222d;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 80px;
+  
+}
+header button{
+    padding: 10px;
+    border-radius: 10px;
+}
+.navbar{
+    display: flex;
+    gap: 50px;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.headercontent{
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(/images/WhatsApp\ Image\ 2025-08-04\ at\ 12.53.25_1f43d46f.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.headerbottom{
+    display: flex;
+    flex-wrap: wrap;
+     background-color: #17222d;
+    padding: 10px 80px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    justify-content: center;
+}
+.bottomimg{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header h1{
+    font-size: 52px;
+}
+header p{
+    font-size: larger;
+}
+h1{
+    font-size: 47px;
+}
+.section1 h1{
+    font-size: 52px;
+    text-align: center;
+}
+.section1 h3{
+    display: flex;
+    justify-content: space-between;
+}
+.section1{
+    background-color: #f3f2f2dc;
+}
+.section1 p{
+    display: none;
+}
+.section1 button{
+    padding: 15px 25px; 
+     background-color: #17222d;
+    color: white;
+    border-radius: 10px;
+}
+.section1content{
+    display: flex;
+    background-color: rgb(145, 145, 146);
+    gap: 50px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 40px 80px;
+}
+.s1dropdown{
+    background-color: white;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;    
+}
+.section1dropdown{
+    padding: 0 60px;
+    padding-top: 40px;
+}
+
+.section2{
+     background-color: #17222d;
+    color: white;
+}
+.section2content{
+    padding: 40px 80px;   
+    text-align: center;
+}
+.section2img{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+    
+}
+.section2 img{
+    width: 100%;
+    object-fit: cover;
+}
+.section3{
+     background-color: #17222d;
+    color: white;
+}
+.section3content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    margin: 20px 0;
+}
+.section3img{
+    width: 50%;
+    padding: 15px;
+    background-color: #c2bfbfdc;  
+}
+.section3img img{
+    object-fit: cover;
+    height: 550px;
+    width: 100%;
+    
+}
+.section3 h1{
+    font-size: 47px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.section3 p{
+    font-size: large;
+    padding-bottom: 80px;
+}
+.section3 button{
+    padding: 15px 26px;
+    border-radius: 10px;
+    background-color: #c2bfbfdc;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.section4,
+.section6,
+footer{
+     background-color: #17222d;
+    color: white;
+}
+.section4content{
+    padding: 20px 80px;
+    text-align: center;
+}
+.section4cards{
+    display: flex;
+    gap: 50px;
+    
+}
+.section4cards img{
+    width: 100%;
+    object-fit: cover;
+}
+.section4 button{
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.card{
+    padding-top: 50px;
+    width: 100%;
+}
+.section5content{
+    text-align: center;
+    padding: 20px 80px;
+}
+.section5cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+.section6content{
+    padding: 30px 80px;
+}
+.section6 p{
+    font-size: larger;
+}
+.section6text{
+    display: flex;
+    gap: 250px;
+    justify-content: space-between;
+}
+.section6button{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    gap: 300px;
+}
+.section6button button{
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #c2bfbfdc;
+    border: none;
+    cursor: pointer;
+}
+.section7{
+    padding: 0 80px;
+    text-align: center;
+}
+.section8{
+    background-color: #17222d;
+    margin-bottom: 20px;
+}
+.section8content{
+     padding: 20px 80px;   
+}
+.profile{
+    background-color: white;
+    display: flex;
+    padding-right: 50px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+.rotatedsquare{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+.section8 button{
+    padding: 12px 40px;
+    margin-right: 80px;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: large;
+    background-color: transparent;
+}
+.loan{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: larger;
+}
+.loan2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: larger;
+    padding: 5px;
+    background-color: rgb(165, 166, 167);
+}
+.section9{
+    padding: 0 80px;
+    background-color: #17222d;
+    color: white;
+}
+form input{
+    padding: 20px;
+    width: 600px; 
+    border-radius: 10px;
+    margin-bottom: 10px;  
+}
+form{
+    display: flex;
+    padding-top: 20px;
+    gap: 50px;
+}
+.section9 button{
+    text-align: center;
+    padding: 20px 25px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 40px;
+    color: white;
+    border: 1px solid white;
+    font-size: large;
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+.section10content{
+    padding: 20px 80px;
+    text-align: center;
+} 
+.section10loan h3{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px 7px;
+    padding-right: 80px;
+    
+}
+.section11loan p{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px 7px;
+    padding-right: 100px;
+    
+}
+.section10loan,
+.section11loan{
+    background-color: #17222d;
+    padding: 40px 80px;
+}
+.section10content h1{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.section11content{
+    background-color: #17222d;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.section11btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
+}
+.section11 button{
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-size: larger;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+}
+.section12acontent{
+    text-align: center;
+    padding: 10px 80px;
+}
+.section12content{
+    background-color: #17222d;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.section12text{
+    padding: 10px;
+    font-size: larger;
+    background-color: white;  
+}
+.section12 p{
+    padding-bottom: 20px;
+}
+.section12 button{
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-right: 40px;
+    font-size: large;
+    margin-top: 10px;
+}
+.section12btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.section13content{
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+     background-color: #17222d;
+}
+.section13text{
+    color: white;
+    padding-right: 140px;
+    font-size: larger;
+}
+.section13text p{
+    padding-bottom: 40px;
+}
+.section13 button{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.section14content{
+    display: flex;
+    justify-content: space-between;
+    background-color: #17222d;
+    padding: 20px 80px;
+
+}
+
+.footercontent{
+     background-color: #17222d;
+    margin-top: 40px;
+    padding: 20px 80px;
+}
+.footertext{
+    display: flex;
+    align-items: center;
+    padding: 20px 120px;
+    justify-content: space-between;
+}
+.footertext img{
+    width: 30px;
+    height: 30px;
+}
+  #menu-icon {
+    display: none;
+  }
+  html,body{
+    overflow-x: hidden;
+  }
+
+@media (max-width: 1300px) {
+
+  
+  nav{
+    padding: 0  40px;
+    
+  }
+  .navbar{
+    gap: 30px;
+  }
+  .headerbottom{
+    padding: 10px 40px;
+  }
+  .section1content{
+    margin: 40px 40px;
+  }
+  
+  .section2content{
+    padding: 40px 40px;
+  }
+  .section2 img{
+    width: 300px;
+  }
+  .section3content{
+    padding: 0 40px;
+  }  
+  .section4content,
+  .section5content,
+  .section6content{
+    padding: 20px 40px;
+  }
+  .section4cards,
+  .section5cards{
+    gap: 20px;
+  }
+  .card{
+    padding-top: 20px;
+  }
+  .section6text{
+    gap: 50px;
+    width: 100%;
+  }
+  .section5 img {
+    width: 320px;
+  }
+  .section7,
+  .section9{
+    padding: 0 40px;
+  }
+  .section8content{
+    padding: 20px 40px;
+  }
+  form input{
+    width: 450px;
+  }
+  form{
+    gap: 20px;
+    justify-content: center;
+  }
+  .section10content{
+    padding: 20px 40px;
+  }
+  .section10loan,
+.section11loan{
+    padding: 40px 40px;
+}
+.section10loan h3{
+    padding-right: 20px; 
+}
+.section11loan p{
+    padding-right: 40px; 
+}
+.section12acontent{
+    padding: 10px 10px;
+}
+ .section13content{
+    padding: 20px 40px;
+ }
+ .section13text{
+    padding-right: 10px;
+ }
+ .section13 img{
+    width: 100%;
+    padding-top: 20px;
+    height: auto;
+ }
+ .section14content{
+    padding: 20px 40px;
+ }
+.section14content img{
+    padding-top: 10px;
+    width: 100%;
+}
+  .footercontent{
+    padding: 20px 30px;
+  }
+  .footertext{
+    padding: 20px 40px;
+  }
+  
+}
+
+@media (max-width: 980px) {
+
+  
+  nav{
+    padding: 0  20px;
+    
+  }
+  .navbar{
+    gap: 20px;
+  }
+  .headerbottom{
+    padding: 10px 20px;
+  }
+  .section1content{
+    margin: 40px 20px;
+    flex-direction: column-reverse;
+  }
+  .section1 img{
+    width: 100%;
+  }
+  
+  .section2content{
+    padding: 40px 20px;
+  }
+  .section2 img{
+    width: 250px;
+  }
+  .section3 br{
+    display: none;
+  }
+  .section3content{
+    flex-direction: column;
+    padding: 0 20px;
+  }  
+  .section3img{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .section4content,
+  .section5content,
+  .section6content{
+    padding: 20px 20px;
+  }
+  .section4cards,
+  .section5cards{
+    gap: 20px;
+  }
+  .card{
+    padding-top: 20px;
+  }
+  .section6text{
+    gap: 50px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .section6button{
+    gap: 100px;
+  }
+  .section5 img {
+    width: 300px;
+  }
+  .section7,
+  .section9{
+    padding: 0 20px;
+  }
+  .loan{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .section8content{
+    padding: 20px 20px;
+  }
+  form input{
+    width: 350px;
+  }
+  form{
+    gap: 20px;
+    justify-content: center;
+  }
+  .section10content{
+    padding: 20px 20px;
+  }
+  .section10loan,
+.section11loan{
+    padding: 40px 20px;
+}
+.section10loan h3{
+    padding-right: 20px; 
+}
+.section11loan p{
+    padding-right: 40px; 
+}
+.section11btn{
+  gap: 50px;
+}
+.section12acontent{
+    padding: 10px 10px;
+}
+ .section13content{
+  flex-direction: column;
+    padding: 20px 20px;
+ }
+ .section13text{
+    padding-right: 10px;
+ }
+ .section13 img{
+    width: 100%;
+    padding-top: 20px;
+    height: auto;
+ }
+ .section14content{
+    padding: 20px 20px;
+ }
+
+.section14content img{
+    padding-top: 10px;
+    width: 400px;
+}
+  .footercontent{
+    padding: 20px 10px;
+  }
+  .footertext{
+    flex-wrap: wrap;
+    padding: 20px 20px;
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+
+  #menu-icon {
+    display: block;
+    color: white;
+    font-size: xx-large;
+    padding-right: 10px;
+    z-index: 999;
+  }
+  nav button{
+    display: none;
+  }
+
+  #nav-bar {
+    display: none;
+    flex-direction: column;
+     background: #17222d;
+    position: absolute;
+    color: white;
+    top: 0px;
+    gap: 50px;
+    right: 0px;
+    padding: 20px;
+    padding-top: 50px;
+    font-weight: bolder;
+    font-size: large;
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  #nav-bar.sidebar{
+    display: flex;
+  }
+  nav{
+    padding: 0  0px;
+    width: 100%;
+    
+  }
+  .headerbottom{
+    padding: 10px;
+    gap: 20px;
+  }
+  .section1content{
+    flex-direction: column-reverse;
+    margin: 40px 10px;
+  }
+  .section1dropdown{
+    padding: 0 10px;
+  }
+  .section1 hr{
+    font-size: 36px;
+  }
+  .section1 img,
+  .section2 img{
+    width: 100%;
+  }
+
+  .section2content{
+    padding: 40px 10px;
+  }
+  .section2img{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .section3content{
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .section3img{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .section3img img{
+    width: 95%;
+    height: auto;
+  }
+  .section4content,
+  .section5content,
+  .section6content{
+    padding: 20px 10px;
+  }
+  .section4cards,
+  .section5cards{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card{
+    padding-top: 20px;
+  }
+  .section5 img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .section6text{
+    flex-direction: column;
+    gap: 2px;
+  }
+  .section6 img{
+    width: 100%;
+  }
+  .section6button{
+    gap: 10px;
+  }
+  .section6button button{
+    padding: 5px 10px;
+  }
+  .loan,
+  .loan2{
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .section7,
+  .section9{
+    padding: 0 10px;
+  }
+  .section8content{
+    padding: 20px 10px;
+  }
+  .section8 button{
+    display: none;
+  }
+  form{
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+  }
+  form input{
+    width: 88%;
+    margin-right: 10px;
+  }
+  .section10content{
+    padding: 20px 10px;
+  }
+  .section10loan,
+.section11loan{
+    padding: 40px 10px;
+}
+.section10loan h3{
+    padding-right: 20px; 
+}
+.section11loan p{
+    padding-right: 40px; 
+}
+.section11btn{
+  gap: 20px;
+}
+
+.section12acontent{
+    padding: 10px 10px;
+}
+ .section13content{
+    padding: 20px 10px;
+    flex-direction: column;
+ }
+ .section13text{
+    padding-right: 10px;
+ }
+ .section13 img{
+    width: 100%;
+    padding-top: 20px;
+    height: auto;
+ }
+ .section14content{
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 10px;
+ }
+.section14content img{
+    padding-top: 10px;
+    width: 100%;
+}
+  .footercontent{
+    padding: 20px 10px;
+  }
+  .footertext{
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  
+}

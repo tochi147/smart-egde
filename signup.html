@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  button {
+    text-align: center;
+    width: 420px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  input {
+    border-radius: 10px;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  h1 {
+    font-size: 37px;
+    margin-bottom: 0px;
+  }
+</style>
+
+<div>
+    <h1>Welcome To Smart-Edge</h1>
+    Nice to have you back! Please enter your details.
+    <form id="signupForm" style="padding-top: 20px;">
+        <p>User Email<br>
+            <input type="text" name="username" required>
+        </p>
+        <p>User Password<br>
+            <input type="password" name="password" required>
+        </p>
+        <p><a href="#">Forget Password</a></p>
+        <button type="submit" style="margin-bottom: 10px; background-color: black; color: white;">
+            Signup
+        </button><br>
+        <button type="button" style="margin-bottom: 20px;">
+            <i class="fab fa-google"></i> Sign up with Google
+        </button><br>
+        <p style="text-align: center;">Already have an account? <a href="/login.html">Login</a></p>
+    </form>
+</div>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const username = event.target.username.value.trim();
+    const password = event.target.password.value.trim();
+
+    const response = await fetch("https://smart-egde-api.onrender.com/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+        alert(data.message || "User registered successfully!");
+        window.location.href = "/login.html"; // redirect to login page
+    } else {
+        alert(data.error || "Something went wrong!");
+    }
+});
+</script>
+
+</body>
+</html>
