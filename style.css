@@ -50,7 +50,7 @@ header button{
     background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(/images/WhatsApp\ Image\ 2025-08-04\ at\ 12.53.25_1f43d46f.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     text-align: center;
 }
 .headerbottom{

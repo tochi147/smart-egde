@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
 <style>
@@ -25,6 +22,7 @@
     padding: 10px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
   }
   input {
     border-radius: 10px;
@@ -37,70 +35,91 @@
     margin-bottom: 0px;
   }
 
-  @media (max-width: 480px){
-    input {
-      width: 380px;
-    }
-    button {
-      width: 400px;
-    }
+  /* spinner */
+  .spinner {
+    margin-left: 8px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
   }
 
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+
+  @media (max-width: 480px){
+    input { width: 380px; }
+    button { width: 400px; }
+  }
   @media (max-width: 380px){
-    input {
-      width: 320px;
-    }
-    button {
-      width: 340px;
-    }
+    input { width: 320px; }
+    button { width: 340px; }
   }
 </style>
 
 <div>
-    <h1>Welcome To Smart-Edge</h1>
-    Nice to have you back! Please enter your details.
-    <form id="loginForm" style="padding-top: 20px;">
-        <p>User Email<br>
-            <input type="text" name="username" required>
-        </p>
-        <p>User Password<br>
-            <input type="password" name="password" required>
-        </p>
-        <p><a href="#">Forget Password</a></p>
-        <button type="submit" style="margin-bottom: 10px; background-color: black; color: white;">
-            Login
-        </button><br>
-        <button type="button" style="margin-bottom: 20px;">
-            <i class="fab fa-google"></i> Sign in with Google
-        </button><br>
-        <p style="text-align: center;">Don't have an account? <a href="/signup.html">Sign up for free</a></p>
-    </form>
+  <h1>Welcome To Smart-Edge</h1>
+  Nice to have you back! Please enter your details.
+  <form id="loginForm" style="padding-top: 20px;">
+    <p>User Email<br>
+      <input type="text" name="username" required>
+    </p>
+    <p>User Password<br>
+      <input type="password" name="password" required>
+    </p>
+    <p><a href="#">Forget Password</a></p>
+    <button id="loginBtn" type="submit" style="margin-bottom: 10px; background-color: black; color: white;">
+      Login
+    </button><br>
+    <button type="button" style="margin-bottom: 20px;">
+      <i class="fab fa-google"></i> Sign in with Google
+    </button><br>
+    <p style="text-align: center;">Don't have an account? <a href="/signup.html">Sign up for free</a></p>
+  </form>
 </div>
 
 <script>
-document.getElementById("loginForm").addEventListener("submit", async function(event) {
-    event.preventDefault();
+const form = document.getElementById("loginForm");
+const loginBtn = document.getElementById("loginBtn");
 
-    const username = event.target.username.value.trim();
-    const password = event.target.password.value.trim();
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-    const response = await fetch("https://smart-egde-api.onrender.com/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ username, password })
+  const username = event.target.username.value.trim();
+  const password = event.target.password.value.trim();
+
+  // show "Logging in..." + spinner
+  loginBtn.innerHTML = `Logging in <span class="spinner"></span>`;
+  loginBtn.disabled = true;
+
+  try {
+    const response = await fetch("https://smart-api-ffrn.onrender.com/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password })
     });
 
     const data = await response.json();
+
     if (response.ok) {
-        // Save token to localStorage
-        localStorage.setItem("token", data.token);
-        alert("Login successful!");
-        window.location.href = "/dashboard.html"; // Redirect to dashboard
+      localStorage.setItem("token", data.token);
+      loginBtn.innerHTML = "Success ✅";
+      loginBtn.style.backgroundColor = "green";
+       window.location.href = "/dashboard.html";
     } else {
-        alert(data.error || "Invalid username or password");
+      alert(data.error || "Invalid username or password");
     }
+  } catch (err) {
+    alert("Error: " + err.message);
+  }
+
+  // reset button
+  loginBtn.innerHTML = "Login";
+  loginBtn.disabled = false;
 });
 </script>
 
